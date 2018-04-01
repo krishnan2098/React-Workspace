@@ -37,12 +37,17 @@ var template = React.createElement(
 
 var user = {
     name: 'Shankar',
-    age: 19,
-    location: 'Mumbai'
+    age: 19
 };
-var userName = 'Shanky';
-var userAge = 20;
-var userLocation = 'Jaipur';
+
+function getLocation(location) {
+    if (location) {
+        return location;
+    } else {
+        return 'Unknown';
+    }
+}
+
 var templateTwo = React.createElement(
     'div',
     null,
@@ -61,8 +66,14 @@ var templateTwo = React.createElement(
         'p',
         null,
         'Location: ',
-        user.location
-    )
+        getLocation(user.location)
+    ),
+    React.createElement(
+        'h3',
+        null,
+        'My h3 tag'
+    ),
+    ';'
 );
 
 var appRoot = document.getElementById('app');

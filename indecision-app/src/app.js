@@ -17,17 +17,23 @@ var template =(
 
 var user = {
     name: 'Shankar',
-    age: 19,
-    location: 'Mumbai'
+    age: 19
 };
-var userName = 'Shanky';
-var userAge = 20;
-var userLocation = 'Jaipur';
+
+function getLocation(location){
+    if(location){
+        return location;
+    } else {
+        return 'Unknown';
+    }
+}
+
 var templateTwo = (
     <div>
         <h1>{user.name}</h1>
         <p>Age: {user.age}</p>
-        <p>Location: {user.location}</p>
+        <p>Location: {getLocation(user.location)}</p>
+        {<h3>My h3 tag</h3>};
     </div>
 );
 
