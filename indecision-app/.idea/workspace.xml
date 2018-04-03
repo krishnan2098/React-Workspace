@@ -21,36 +21,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+            <state relative-caret-position="301">
+              <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="es6-arrow-function.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/playground/es6-arrow-function.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="es6-arrow-function-2.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/playground/es6-arrow-function-2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -62,10 +38,10 @@
       <list>
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/scripts/app.js" />
-        <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/src/playground/es6-let-const.js" />
         <option value="$PROJECT_DIR$/src/playground/es6-arrow-function.js" />
         <option value="$PROJECT_DIR$/src/playground/es6-arrow-function-2.js" />
+        <option value="$PROJECT_DIR$/src/app.js" />
       </list>
     </option>
   </component>
@@ -224,12 +200,12 @@
       <workItem from="1522060588360" duration="7702000" />
       <workItem from="1522481675305" duration="17086000" />
       <workItem from="1522712662028" duration="2034000" />
-      <workItem from="1522736563423" duration="2753000" />
+      <workItem from="1522736563423" duration="4654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30642000" />
+    <option name="totallyTimeSpent" value="32543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -286,7 +262,7 @@
         <state relative-caret-position="300">
           <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -296,7 +272,7 @@
         <state relative-caret-position="390">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -341,13 +317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -357,7 +326,7 @@
         <state relative-caret-position="300">
           <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -375,8 +344,16 @@
         <state relative-caret-position="287">
           <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
