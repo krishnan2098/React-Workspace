@@ -14,3 +14,14 @@ const nameConst = 'Frank';
 // nameConst = 'FDR'; Constants cant be changed within the programs either
 
 console.log('nameConst', nameConst);
+
+//block scoping
+var fullName = 'Andrew mead';
+let firstName;
+//let and const are block level scoped. that is they cannot be accessed outside code block in which they are defined
+
+if (fullName){
+    firstName = fullName.split(' ')[0];
+    console.log(firstName);
+}
+console.log(firstName);
