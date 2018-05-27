@@ -16,20 +16,20 @@ var VisibilityToggle = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (VisibilityToggle.__proto__ || Object.getPrototypeOf(VisibilityToggle)).call(this, props));
 
-        _this.handleToggleVisibilty = _this.handleToggleVisibilty.bind(_this);
+        _this.handleToggleVisibility = _this.handleToggleVisibility.bind(_this);
         _this.state = {
-            visibilty: false
+            visibility: false
         };
         return _this;
     }
 
     _createClass(VisibilityToggle, [{
-        key: 'handleToggleVisibilty',
-        value: function handleToggleVisibilty() {
+        key: 'handleToggleVisibility',
+        value: function handleToggleVisibility() {
             this.setState(function (prevState) {
-                visibility: {
-                    !prevState.visibilty;
-                }
+                return {
+                    visibility: !prevState.visibility
+                };
             });
         }
     }, {
@@ -45,9 +45,9 @@ var VisibilityToggle = function (_React$Component) {
                 ),
                 React.createElement(
                     'button',
-                    { onClick: this.handleToggleVisibilty },
+                    { onClick: this.handleToggleVisibility },
                     ' ',
-                    this.state.visibilty ? 'Hide Details' : 'Show Details',
+                    this.state.visibility ? 'Hide Details' : 'Show Details',
                     ' '
                 ),
                 this.state.visibility && React.createElement(
