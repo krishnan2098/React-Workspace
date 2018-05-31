@@ -32,6 +32,11 @@ var IndecisionApp = function (_React$Component) {
             console.log('componentDidMount');
         }
     }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            console.log('componentDidUpdate');
+        }
+    }, {
         key: 'handleDeleteOptions',
         value: function handleDeleteOptions() {
             this.setState(function () {
