@@ -13,6 +13,10 @@ class Counter extends React.Component {
         console.log('mounted');
     }
 
+    componentDidUpdate() {
+        console.log('updated');
+    }
+
     handleAddOne() {
         this.setState((prevState) => {
             return {
