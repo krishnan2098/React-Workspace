@@ -1,0 +1,1 @@
+console.log('this app,js file inside src directory')
