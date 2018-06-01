@@ -10,6 +10,16 @@ class Counter extends React.Component {
     }
 
     componentDidMount() {
+        try {
+            const json = localStorage.getItem('count')
+            const count = JSON.parseInt(json);
+            if(count) {
+                this.setState(() => ({ count }));
+            }
+        } catch (e) {
+            //DO Nothing
+        }
+
         console.log('mounted');
     }
 
