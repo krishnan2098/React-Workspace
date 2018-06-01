@@ -29,11 +29,26 @@ var Counter = function (_React$Component) {
         key: 'componentDidMount',
         value: function componentDidMount() {
             console.log('mounted');
+            try {
+                var json = localStorage.getItem('count');
+                var count = JSON.parse(json);
+                console.log('mounted');
+                if (count) {
+                    this.setState(function () {
+                        return { count: count };
+                    });
+                }
+            } catch (e) {
+                //DO Nothing
+            }
         }
     }, {
         key: 'componentDidUpdate',
-        value: function componentDidUpdate() {
-            console.log('updated');
+        value: function componentDidUpdate(prevProps, prevState) {
+            if (prevState.count !== this.state.count) {
+                var json = JSON.stringify(this.state.count);
+                localStorage.setItem('count', json);
+            }
         }
     }, {
         key: 'handleAddOne',
