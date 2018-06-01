@@ -30,10 +30,10 @@ var Counter = function (_React$Component) {
         value: function componentDidMount() {
             console.log('mounted');
             try {
-                var json = localStorage.getItem('count');
-                var count = JSON.parse(json);
+                var stringCount = localStorage.getItem('count');
+                var count = parseInt(stringCount);
                 console.log('mounted');
-                if (count) {
+                if (!isNaN(count)) {
                     this.setState(function () {
                         return { count: count };
                     });
