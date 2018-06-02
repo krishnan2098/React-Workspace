@@ -1,1 +1,1 @@
-console.log('this app,js file inside src directory')
+console.log('this app,js file inside src directory!');
