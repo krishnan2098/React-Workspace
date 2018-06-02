@@ -69,35 +69,36 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js__ = __webpack_require__(2);
 // import './utils.js'
+// import subtract, { square, add } from './utils.js'
+// console.log('this app,js file inside src directory!');
+// console.log(square(4));
+// console.log(add(100, 23));
+// console.log(subtract(100, 50));
 
-console.log('this app,js file inside src directory!');
-console.log(__WEBPACK_IMPORTED_MODULE_0__utils_js__["c" /* square */](4));
-console.log(__WEBPACK_IMPORTED_MODULE_0__utils_js__["a" /* add */](100, 23));
-console.log(__WEBPACK_IMPORTED_MODULE_0__utils_js__["b" /* default */](100, 50));
 
-// import { isAdult, canDrink } from "./person.js";
-// console.log('Adult?', isAdult(100));
-// console.log('Drink?', canDrink(100));
+console.log('Adult?', __WEBPACK_IMPORTED_MODULE_0__person_js__["c" /* isAdult */](100));
+console.log('Drink?', __WEBPACK_IMPORTED_MODULE_0__person_js__["a" /* canDrink */](100));
+console.log('Senior Citizen?', __WEBPACK_IMPORTED_MODULE_0__person_js__["b" /* default */](1000));
 
 /***/ }),
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-console.log('utils.js is running');
-
-const square = x => x * x;
-/* harmony export (immutable) */ __webpack_exports__["c"] = square;
+const isAdult = age => age > 18;
+/* harmony export (immutable) */ __webpack_exports__["c"] = isAdult;
 
 
-const add = (a, b) => a + b;
-/* harmony export (immutable) */ __webpack_exports__["a"] = add;
+const canDrink = age => age > 21;
+/* harmony export (immutable) */ __webpack_exports__["a"] = canDrink;
 
 
-/* harmony default export */ __webpack_exports__["b"] = ((a, b) => a- b);
-// export { square, add, subtract as default };
+/* harmony default export */ __webpack_exports__["b"] = (age => age > 60);
+
+// export { isAdult, canDrink, isSenior as default };
 
 /***/ })
 /******/ ]);
