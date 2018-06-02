@@ -5,16 +5,34 @@ import Action from './Action';
 import Options from './Options';
 
 class IndecisionApp extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-        this.handlePick = this.handlePick.bind(this);
-        this.handleAddOption = this.handleAddOption.bind(this);
-        this.handleDeleteOption = this.handleDeleteOption.bind(this);
-        this.state = {
-            options: []
-        };
-    }
+    state = {
+        options : []
+    };
+
+    handleDeleteOptions = () => {
+        this.setState(() => ({ options: [] }));
+    };
+
+    handleDeleteOption = (optionToRemove) => {
+        this.setState((prevState) => ({
+            options: prevState.options.filter((option) => optionToRemove !== option)
+        }));
+    };
+
+    handlePick = () => {
+        const randIndex = Math.floor(Math.random()*this.state.options.length);
+        alert(this.state.options[randIndex]);
+    };
+
+    handleAddOption = (option) => {
+        if(!option) {
+            return 'Field Cannot be left empty!';
+        } else if(this.state.options.indexOf(option) > -1) {
+            return 'This Option already exists';
+        }
+
+        this.setState((prevState) => ({ options: prevState.options.concat(option) }));
+    };
 
     componentDidMount() {
         try {
@@ -40,31 +58,6 @@ class IndecisionApp extends React.Component {
 
     componentWillUnmount() {
         console.log("unmounting!");
-    }
-
-    handleDeleteOptions() {
-        this.setState(() => ({ options: [] }));
-    }
-
-    handleDeleteOption(optionToRemove) {
-        this.setState((prevState) => ({
-            options: prevState.options.filter((option) => optionToRemove !== option)
-        }));
-    }
-
-    handlePick() {
-        const randIndex = Math.floor(Math.random()*this.state.options.length);
-        alert(this.state.options[randIndex]);
-    }
-
-    handleAddOption(option) {
-        if(!option) {
-            return 'Field Cannot be left empty!';
-        } else if(this.state.options.indexOf(option) > -1) {
-            return 'This Option already exists';
-        }
-
-        this.setState((prevState) => ({ options: prevState.options.concat(option) }));
     }
 
     render() {
