@@ -16,5 +16,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const template = React.createElement('p', {}, 'Testing 123');
-ReactDOM.render( template, document.getElementById('app'));
+const template = <p>This is jsx from webpack</p>;
+ReactDOM.render(template, document.getElementById('app'));
