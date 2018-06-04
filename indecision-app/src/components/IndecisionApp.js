@@ -11,6 +11,10 @@ class IndecisionApp extends React.Component {
         selectedOption: undefined
     };
 
+    clearSelectedOption = () => {
+        this.setState(() => ({ selectedOption: undefined}));
+    };
+
     handleDeleteOptions = () => {
         this.setState(() => ({ options: [] }));
     };
@@ -82,6 +86,7 @@ class IndecisionApp extends React.Component {
                 />
                 <OptionModal
                     selectedOption={this.state.selectedOption}
+                    clearSelectedOption={this.clearSelectedOption}
                 />
             </div>
         );
