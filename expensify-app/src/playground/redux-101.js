@@ -36,11 +36,12 @@ const decrement = {
 
 //ACTION OBJECT FOR RESETING
 const reset = {
-    type: 'DECREMENT'
+    type: 'RESET'
 };
 
 //send action to store to change the state
 store.dispatch(increment);
+store.dispatch(decrement);
 store.dispatch(reset);
 store.dispatch(decrement);
 
