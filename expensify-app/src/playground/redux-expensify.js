@@ -48,7 +48,6 @@ const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
                 action.expense
                 ];
         case 'REMOVE_EXPENSE' :
-            console.log(state);
             return state.filter(({ id }) => id !== action.id );
         default:
             return state;
@@ -87,8 +86,6 @@ store.subscribe(() => {
 const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 100 }));
 const expenseTwo = store.dispatch(addExpense({ description: 'Coffee', amount: 300 }));
 
-console.log(expenseTwo);
-
 store.dispatch(removeExpense({ id: expenseOne.expense.id }));
 
 const demoState = {
@@ -107,7 +104,14 @@ const demoState = {
     }
 };
 
-const user = {
-    name: 'Jen',
-    age: 24
-};
+// const user = {
+//     name: 'Jen',
+//     age: 24
+// };
+//
+// console.log({
+//     age: 27,
+//     ...user,
+//     location: 'Philadelphia'
+//
+// });
