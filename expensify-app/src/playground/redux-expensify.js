@@ -1,11 +1,34 @@
 import { createStore, combineReducers } from 'redux';
+import uuid from 'uuid';
 
 // REDUCERS SHOULD
 // 1. BE PURE FUNCTIONS NOT HAVING THEIR SCOPRE LIMITED TO THE FUNCTION ITSELF
 // 2. IT SHOULD NOT CHANGE THE STATE. RATHER IT SHOULD ACCESS THE STATE
 
 // ADD_EXPENSE
+const addExpense = (
+    {
+        description = '',
+        note = '',
+        amount = 0,
+        createdAt = 0
+    } = {}
+) => ({
+    type: 'ADD_EXPENSE',
+    expense: {
+        id: uuid(),
+        description,
+        note,
+        amount,
+        createdAt
+    }
+});
+
 // REMOVE_EXPENSE
+const removeExpense = ({ id } = {}) => ({
+    type: 'REMOVE_EXPENSE',
+    id
+});
 // EDIT_EXPENSES
 // SET-TEXT-FILTER
 // SORT_BY_DATE
@@ -19,6 +42,14 @@ const expensesReducerDefaultState = [];
 
 const expensesReducer = ( state = expensesReducerDefaultState, action ) => {
     switch( action.type ) {
+        case 'ADD_EXPENSE':
+            return [
+                ...state,
+                action.expense
+                ];
+        case 'REMOVE_EXPENSE' :
+            console.log(state);
+            return state.filter(({ id }) => id !== action.id );
         default:
             return state;
     }
@@ -49,7 +80,16 @@ const store = createStore(
     })
 );
 
-console.log( store.getState() );
+store.subscribe(() => {
+    console.log( store.getState() );
+});
+
+const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 100 }));
+const expenseTwo = store.dispatch(addExpense({ description: 'Coffee', amount: 300 }));
+
+console.log(expenseTwo);
+
+store.dispatch(removeExpense({ id: expenseOne.expense.id }));
 
 const demoState = {
     expenses: [{
@@ -65,4 +105,9 @@ const demoState = {
         startDate: undefined,
         endDate: undefined
     }
+};
+
+const user = {
+    name: 'Jen',
+    age: 24
 };
